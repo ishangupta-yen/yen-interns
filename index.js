@@ -26,6 +26,11 @@ app.get("/product/:name",(req,res)=>
    res.status(200).send(product)
 })
 
+app.get("/product/:id",(req,res)=>
+{
+   let product= productMast.find(c=>c.id==req.params.id)
+   res.status(200).send(product)
+})
 
 app.post("/product",(req,res)=>
 {
