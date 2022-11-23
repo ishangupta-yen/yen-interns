@@ -12,7 +12,7 @@ var productMast=[
 
 app.get("/",(req,res)=>
 {
-    res.send("Welcome to Mystore");
+    res.send("Welcome to store");
 })
 
 app.get("/products",(req,res)=>
