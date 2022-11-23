@@ -50,6 +50,14 @@ app.put("/product/:id",(req,res)=>
 
 })
 
+//delete method
+app.delete("/product/:id",function(req,res){
+    let deleteIndex = req.params.id-1;
+    productMast.splice(deleteIndex);
+
+    res.status(200).send("product with id " + req.params.id + " is removed succesfully"); 
+})
+
 
 
 
