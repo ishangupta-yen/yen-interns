@@ -48,6 +48,13 @@ productMast.indexOf((x)=>{
     x.id==req.params.id;
     console.log(productMast[id])})
 })
+app.put("/product/:id",(req,res)=>
+{
+
+productMast.indexOf((x)=>{
+    x.id==req.params.id;
+    console.log(productMast[id])})
+})
 
 
 
