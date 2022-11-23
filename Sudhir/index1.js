@@ -40,11 +40,11 @@ res.status(202).send(`Product created with Id ${id}`)
 })
 
 
-
+//update method
 app.put("/product/:id",(req,res)=>
 {
     console.log(req.params,req.body);
-    productMast[req.params.id] = req.body;
+    productMast[req.params.id -1] = req.body;
 
     res.status(200).send("product with id" + req.params.id + " updated succesfully");
 
