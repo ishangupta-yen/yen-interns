@@ -2,6 +2,7 @@ const express=require("express");
 
 const app = express();
 app.use(express.json())
+app.use(static)
 var productMast=[
     {id:1,name:"Marker",price:10,stock:100,type:"Stationary"},
     {id:2,name:"Mouse",price:1000,stock:50,type:"Electronics"},
@@ -12,7 +13,7 @@ var productMast=[
 
 app.get("/",(req,res)=>
 {
-    res.send("Welcome to Mystore");
+    res.send("Welcome to store");
 })
 
 app.get("/products",(req,res)=>
@@ -39,8 +40,6 @@ res.status(202).send(`Product created with Id ${id}`)
 
 })
 
-
-
 app.put("/product/:id",(req,res)=>
 {
 
@@ -48,10 +47,4 @@ productMast.indexOf((x)=>{
     x.id==req.params.id;
     console.log(productMast[id])})
 })
-
-
-
-
-
-
 app.listen(3000)
